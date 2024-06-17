@@ -1,1 +1,2 @@
-# DT207G_Moment2_webbplats
+# Webbplats
+Detta är en webbplats för moment 2 i kursen Backend-baserad webbutveckling.

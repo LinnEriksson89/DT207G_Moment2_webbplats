@@ -1,0 +1,31 @@
+{
+  "name": "webbplats",
+  "version": "1.0.0",
+  "description": "The repo for the webbsite of the laboration.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LinnEriksson89/DT207G_Moment2_webbplats.git"
+  },
+  "author": "Linn Eriksson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LinnEriksson89/DT207G_Moment2_webbplats/issues"
+  },
+  "homepage": "https://github.com/LinnEriksson89/DT207G_Moment2_webbplats#readme",
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "gulp-html-minifier-terser": "^7.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify-es": "^3.0.0",
+    "sass": "^1.62.1"
+  },
+  "dependencies": {
+    "gulp": "^4.0.0",
+    "gulp-cli": "^3.0.0"
+  }
+}
