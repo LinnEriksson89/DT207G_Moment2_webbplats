@@ -15,7 +15,8 @@ const uglify = require('gulp-uglify-es').default;
 const files = {
     htmlPath: "src/**/*.html",
     sassPath: "src/css/**/*.scss",
-    jsPath: "src/js/**/*.js"
+    jsPath: "src/js/**/*.js",
+    imagePath: "src/images/*"
 }
 
 //HTML-task
@@ -43,6 +44,12 @@ function jsTask() {
     .pipe(dest('pub/js'));
 }
 
+//Image-task
+function imageTask() {
+    return src(files.imagePath)
+    .pipe(dest('pub/images'));
+}
+
 //Watcher
 function watchTask() {
 
@@ -50,11 +57,11 @@ function watchTask() {
         server: "./pub"
     });
 
-    watch([files.htmlPath, files.sassPath, files.jsPath], parallel(htmlTask, sassTask, jsTask)).on('change', browserSync.reload);
+    watch([files.htmlPath, files.sassPath, files.jsPath, files.imagePath], parallel(htmlTask, sassTask, jsTask, imageTask)).on('change', browserSync.reload);
 }
 
 //Run all tasks above
 exports.default = series(
-    parallel(htmlTask, sassTask, jsTask),
+    parallel(htmlTask, sassTask, jsTask, imageTask),
     watchTask
 );
