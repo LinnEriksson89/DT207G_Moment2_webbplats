@@ -1,0 +1,39 @@
+/* DT207G - Backend-baserad webbutveckling
+ * Moment 2
+ * Linn Eriksson, VT24
+ */
+
+//Hides skiplink on mobile.
+
+.skiplink {
+   display: none;
+}
+
+//Media query for when skiplink is in use.
+@media only screen and (min-width: $screen-min-width){
+    .skiplink {
+        display: inline;
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    .skiplink:focus {
+        width: auto;
+        height: auto;
+        background-color: $button-background-color;
+        color: $button-text-color;
+        font-size: $normal-font-size;
+        font-weight: bold;
+        text-align: center;
+        padding: 20px;
+        border-radius: $button-border-radius;
+        border: $button-border;
+        top: 10px;
+        left: 10px;
+        z-index: 99;
+    }
+}
