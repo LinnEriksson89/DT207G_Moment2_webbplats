@@ -5,11 +5,11 @@
 
 //General layout for buttons.
 
-input.button {
+.button {
     background-color: $button-background-color;
     color: $button-text-color;
     border: $button-border;
     border-radius: $button-border-radius;
-    padding: 1%;
+    padding: 8px 12px;
     margin: 1%;
 }
