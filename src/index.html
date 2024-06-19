@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
+
 <body>
     <div id="wrapper">
         <header>
@@ -25,7 +27,10 @@
         </nav>
         <main id="maincontent">
             <h2>Välkommen</h2>
-            <p></p>
+            <p contenteditable>Här är en lista med jobb. Man kan uppdatera jobben genom att redigera informationen i jobbet och sedan klicka på knappen "uppdatera".</p>
+            <div id="joblist">
+                <!--Here list of jobs will be added with JS.-->
+            </div>
         </main>
         <footer>
             <p>Webbplats skapad som en del av <a
@@ -33,6 +38,7 @@
                     webbutveckling</a> av <a href="mailto:lier2209@student.miun.se">Linn Eriksson</a>.</p>
         </footer>
     </div>
-    <script type="text/javascript" src="read.js"></script>
+    <script type="text/javascript" src="js/read.js"></script>
 </body>
+
 </html>
