@@ -19,6 +19,9 @@
         padding: 0;
         overflow: hidden;
         position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: $theme-primary-color;
     }
 
     .skiplink:focus {
