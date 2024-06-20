@@ -48,10 +48,14 @@ function createJob (event) {
     })
     .then(response => {
         if(response.status != 201) {
-            //Show error message if update fails.
+            //Show error message if adding fails.
             let message = document.getElementById("jobmessage");
             message.innerHTML = "Jobbet kunde inte skapas."
             return
+        } else {
+            //Show information if adding is success.
+            let message = document.getElementById("jobmessage");
+            message.innerHTML = "Jobbet har lagts till!"
         }
         return response.json()
         .then(clearForm)
