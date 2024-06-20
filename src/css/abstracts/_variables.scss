@@ -6,29 +6,28 @@
 //Variables used in other files.
 
 //Importing fonts.
-@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Domine:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono|Muli');
 
 //Colors
 $theme-primary-color: #f1f1f1;
 $dark-primary-color: scale-color($theme-primary-color, $lightness: -50%);
 $light-primary-color: scale-color($theme-primary-color, $lightness: 50%);
 
-$theme-secondary-color: #000;
+$theme-secondary-color: #207207;
 $dark-secondary-color: scale-color($theme-secondary-color, $lightness: -50%);
-$light-secondary-color: scale-color($theme-secondary-color, $lightness: 50%);
-
-$red-details: #E61D2B;
+$light-secondary-color: scale-color($theme-secondary-color, $lightness: 80%);
 
 //Buttons
-$button-background-color: $dark-secondary-color;
+$button-background-color: $theme-secondary-color;
 $button-text-color:  $theme-primary-color;
 $button-border-color:  $theme-primary-color;
 $button-border-radius: 10px;
 $button-border: 1px solid $button-border-color;
 
 //Fonts
-$serif-font: "Domine", Georgia, serif;
-$sans-serif-font: "Courgette", Verdana, sans-serif;
+$serif-font: Georgia, serif;
+$sans-serif-font: "Muli", Verdana, sans-serif;
+$mono-space-font: "Space Mono", monospace;
 
 //Variable for "normal body text".
 $normal-font-size: 1.6em;

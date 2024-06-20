@@ -5,7 +5,7 @@
  
 //Layout for navigation.
 nav {
-    background: $red-details;
+    background: $theme-secondary-color;
     margin: 0;
     font-weight: bold;
     text-align: center;
@@ -21,29 +21,39 @@ nav {
             
             padding: $general-padding;
             margin: 0;
-            border: 2px solid $red-details;
+            border: 2px solid $theme-secondary-color;
 
             a {
                 text-decoration: none;
-                color: $dark-secondary-color;
+                color: $theme-primary-color;
             }
         }
 
-        li:hover {
+        li:hover, .current {
             background: $theme-primary-color;
-            border: 2px solid $theme-secondary-color;
             a {
                 color: $theme-secondary-color;
             }
         }
     }
+}
 
-   
+//Make a navigation bar on larger screens. 
+@media only screen and (min-width: $screen-min-width){
+    nav {
 
-    //Make a navigation bar on larger screens. 
-    @media only screen and (min-width: $screen-min-width){
+        border-top: 5px solid $theme-secondary-color;
+        border-bottom: 10px solid $theme-primary-color;
+        padding: 0 $general-padding;
         li {
             float: left;
+            margin: 0 10px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        li.current {
+            border: 2px solid $theme-primary-color;
+
         }
     }
 }

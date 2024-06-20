@@ -22,14 +22,6 @@ h3 {
 h4 {
     @extend h1;
     font-size: $normal-font-size;
-    border-bottom: 2px solid $red-details;
-}
-
-h5 {
-    @extend h1;
-    font-size: $normal-font-size;
-    font-weight: normal;
-    margin-bottom: 0;
 }
 
 //Body text in paragraphs and lists.
@@ -50,5 +42,9 @@ table, form {
     //Shorter paragraphs for increased readability on larger screens.
     p {
         width: 70%;
+    }
+
+    .right {
+        text-align: right;
     }
 }

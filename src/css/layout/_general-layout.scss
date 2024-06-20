@@ -19,6 +19,13 @@ main {
     padding: 1%;
 }
 
+article {
+    border: 2px solid $dark-secondary-color;
+    border-radius: 10px;
+    margin: 2% 0;
+    max-width: 500px;
+}
+
 //Layout for larger screens.
 @media only screen and (min-width: $screen-min-width){
     #wrapper {

@@ -5,7 +5,7 @@
 
 //Layout for header.
 header {
-    background: $theme-secondary-color;
+    background: $dark-secondary-color;
     padding: $general-padding;
     margin: 0;
     text-align: center;
@@ -16,5 +16,10 @@ header {
         h1 {
             color: $theme-primary-color;
         }
+    }
+
+    p {
+        color: $theme-primary-color;
+        width: 100%;
     }
 }
