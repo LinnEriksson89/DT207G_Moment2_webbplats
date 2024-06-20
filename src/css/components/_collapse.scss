@@ -12,12 +12,23 @@
 */
 
 //Make things of class "collapse" hidden.
-.collapse {
+div.collapse {
     display: none;
     overflow: hidden;
     
+    h4 {
+        padding: $general-padding;
+        margin: 0;
+    }
+
     p {
-        width: 100%;
+        width: 95%;
+        margin: 0;
+        padding: $general-padding;
+    }
+
+    p.right {
+        text-align: right;
     }
 }
 
