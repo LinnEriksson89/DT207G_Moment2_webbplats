@@ -32,7 +32,7 @@ function writeJobs(jobArray) {
 
     //Writing every line in the table.
     jobArray.forEach(job=> {
-        divElement.innerHTML += `<article><h3 id="company${job.id}" class="job" contenteditable>${job.companyname}</h3><div class="collapse"><h4 id="title${job.id}" class="job" contenteditable>${job.jobtitle}</h4><p id="description${job.id}" class="job" contenteditable>${job.description}</p><p class="job left"><span id="startdate${job.id}" contenteditable>${job.startdate}</span> till <span id="enddate${job.id}" contenteditable>${job.enddate}</span> i <span id="location${job.id}" contenteditable>${job.location}</span>.</p><p class="job right"><span id="message${job.id}"></span><button type="button" class="update button" data-id="${job.id}">Uppdatera</button><button type="button" class="delete button" data-id="${job.id}">Radera</button></p></div></article>`;  
+        divElement.innerHTML += `<article><h3 class="job jobheaders">${job.companyname}</h3><div class="collapse"><h4 class="job"><span id="title${job.id}" contenteditable>${job.jobtitle}</span> på <span id="company${job.id}" contenteditable>${job.companyname}</span></h4><p id="description${job.id}" class="job" contenteditable>${job.description}</p><p class="job left">Anställd: <span id="startdate${job.id}" contenteditable>${job.startdate}</span> till <span id="enddate${job.id}" contenteditable>${job.enddate}</span> i <span id="location${job.id}" contenteditable>${job.location}</span>.</p><p class="job right"><span id="message${job.id}"></span><button type="button" class="update button" data-id="${job.id}">Uppdatera</button><button type="button" class="delete button" data-id="${job.id}">Radera</button></p></div></article>`;  
     });
 
     //Make delete and update-buttons work.
@@ -45,6 +45,13 @@ function writeJobs(jobArray) {
 
     for(let i=0; i < deleteButtons.length; i++) {
         deleteButtons[i].addEventListener("click", deleteJob);
+    }
+
+    //Make collapsible CSS wok.
+    let jobheaders = document.getElementsByClassName("jobheaders");
+
+    for(let i=0; i < jobheaders.length; i++) {
+        jobheaders[i].addEventListener("click", showCollapse);
     }
 
 }
@@ -107,4 +114,17 @@ function deleteJob(event) {
         .then(getJobs)
         .catch(err => console.log(err))
     })
+}
+
+//Show collapsible CSS.
+function showCollapse() {
+    this.classList.toggle("active");
+    let collapse = this.nextElementSibling;
+
+    if(collapse.style.display === "block") {
+        collapse.style.display = "none";
+    } else {
+        collapse.style.display = "block";
+        
+    }
 }
